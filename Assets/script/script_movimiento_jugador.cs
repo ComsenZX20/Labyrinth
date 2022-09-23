@@ -7,7 +7,7 @@ public class script_movimiento_jugador : MonoBehaviour
    public float MovimientoEjeX;
    public float MovimientoEjeY;
     public float MovimientoEjeZ;
-    public float VelocidadMovimiento = 10.5f;
+    public float VelocidadMovimiento = 1.5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +19,10 @@ public class script_movimiento_jugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MovimientoEjeZ = Input.GetAxis("Horizontal") * Time.deltaTime * VelocidadMovimiento;
-        MovimientoEjeX = -Input.GetAxis("Vertical") * Time.deltaTime * VelocidadMovimiento;
-       
+        MovimientoEjeX = Input.GetAxis("Vertical") * Time.deltaTime * VelocidadMovimiento;
+
+        MovimientoEjeZ = -Input.GetAxis("Horizontal") * Time.deltaTime * VelocidadMovimiento;
+
         transform.Translate(MovimientoEjeX, MovimientoEjeY, MovimientoEjeZ);  
     }
 }
