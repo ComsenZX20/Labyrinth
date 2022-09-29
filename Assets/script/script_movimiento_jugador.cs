@@ -19,6 +19,7 @@ public class script_movimiento_jugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //funcion que permitirá el movimiento del personaje.
         MovimientoEjeX = Input.GetAxis("Vertical") * Time.deltaTime * VelocidadMovimiento;
 
         MovimientoEjeZ = -Input.GetAxis("Horizontal") * Time.deltaTime * VelocidadMovimiento;
